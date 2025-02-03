@@ -17,7 +17,7 @@ User click lanjut tanpa login
 
 User close pop up on homepage
     Sleep    10s
-    Wait Until Element Is Visible        ${btn_next_popup}
+    Wait Until Element Is Visible        ${btn_next_popup}     timeout=5s
     Click Element                        ${btn_next_popup}
     Click Element                        ${btn_next_popup}
     Click Element                        ${btn_next_popup}
@@ -49,10 +49,11 @@ User input origin and destination pengiriman
 
 User verify tarif delivery
     Wait Until Element Is Visible        ${btn_tambah_detail_paket}
-    Scroll Element Into View             ${wording_total_biaya}
+    Scroll Down                          ${wording_total_biaya}
     Wait Until Element is visible        ${wording_total_biaya}     timeout=5s
     Wait Until Element Is Visible        ${price_estimasi_busspack}
     Wait Until Element Is Visible        ${price_estimasi_jumbopack}
+
 
 
 
